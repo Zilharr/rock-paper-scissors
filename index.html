@@ -19,8 +19,11 @@
         function playRound(playerSelection, computerSelection) {
             selection = playerSelection.toUpperCase();
             compSelection = computerSelection.toUpperCase();
-
-            if (selection == compSelection) {
+            
+            if (playerSelection == null || playerSelection == '') {
+                alert("Please enter a choice!");
+                game(playRound);
+            } else if (selection == compSelection) {
                 return `You Tie! ${selection} ties with ${compSelection}`;
             } else if (selection == "ROCK" && compSelection == "SCISSORS"
                     || selection == "PAPER" && compSelection == "ROCK"
