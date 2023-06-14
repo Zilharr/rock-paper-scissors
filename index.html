@@ -7,7 +7,7 @@
 </head>
 <body>
     <script>
-        function getComputerChoice() { //Assign choice to computer
+        function getComputerChoice() {
             randomNumber = Math.floor(Math.random() * 3) + 1;
             if (randomNumber == 1) {
                 return "Rock";
@@ -17,8 +17,8 @@
         }
 
         function playRound(playerSelection, computerSelection) {
-            selection = playerSelection.toUpperCase(); //Formats player choice
-            compSelection = computerSelection.toUpperCase(); //Formats computer choice for later string format
+            selection = playerSelection.toUpperCase(); //Formats player choice for later string format uniformity
+            compSelection = computerSelection.toUpperCase(); //Formats computer choice for later string format uniformity
             
             if (playerSelection == null || playerSelection == '') { //Handles empty string case during prompt
                 alert("Please enter a choice!");
@@ -32,7 +32,7 @@
             } return `You Lose! ${compSelection} beats ${selection}`;
         }
 
-        function game(playRound) { //Initiates program
+        function game(playRound) {
             const playerSelection = prompt("Pick Rock, Paper, or Scissors:", '');
             const computerSelection = getComputerChoice();
 
