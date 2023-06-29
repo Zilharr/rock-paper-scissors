@@ -3,47 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Megrim&family=Roboto:ital,wght@0,400;0,700;1,100&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+    <title>Rock, Paper, Scissors</title>
 </head>
 <body>
-    <script>
-        function getComputerChoice() {
-            randomNumber = Math.floor(Math.random() * 3) + 1;
-            if (randomNumber == 1) {
-                return "Rock";
-            } else if (randomNumber == 2) {
-                return "Paper";
-            } return "Scissors";
-        }
-
-        function playRound(playerSelection, computerSelection) {
-            selection = playerSelection.toUpperCase(); //Formats player choice for later string format uniformity
-            compSelection = computerSelection.toUpperCase(); //Formats computer choice for later string format uniformity
-            
-            if (playerSelection == null || playerSelection == '') { //Handles empty string case during prompt
-                alert("Please enter a choice!");
-                game(playRound);
-            } else if (selection == compSelection) {
-                return `You Tie! ${selection} ties with ${compSelection}`;
-            } else if (selection == "ROCK" && compSelection == "SCISSORS" || 
-                selection == "PAPER" && compSelection == "ROCK" || 
-                selection == "SCISSORS" && compSelection == "PAPER") {
-                    return `You Win! ${selection} beats ${compSelection}`;
-            } return `You Lose! ${compSelection} beats ${selection}`;
-        }
-
-        function game(playRound) {
-            const playerSelection = prompt("Pick Rock, Paper, or Scissors:", '');
-            const computerSelection = getComputerChoice();
-
-            return playRound(playerSelection, computerSelection);
-        }
-
-        console.log(game(playRound));
-        console.log(game(playRound));
-        console.log(game(playRound));
-        console.log(game(playRound));
-        console.log(game(playRound));
-    </script>
+    <header>
+        <h1 id="premise" onload="typing()"></h1>
+    </header>
+    <div id='container'>
+        <div id="border">
+            <h1>MAKE A CHOICE...</h1>
+            <div id="choice">
+                <img class="playerChoice" id="playerChoice" src="question.png">
+                <img class="computerChoice" id="computerChoice" src="question.png">
+            </div>
+            <div id="scoreboard">
+                <p>PLAYER SCORE</p>
+                <p>AI SCORE</p>
+            </div>
+            <div id="score">
+                <p id="playerScore">0</p>
+                <p id="computerScore">0</p>
+            </div>
+            <div id='options'>
+                <button type="submit" class="buttons" id="ROCK"><img id="ROCK" class='choices' src="rock.png"></button>
+                <button type="submit" class="buttons" id="PAPER"><img id="PAPER" class='choices' src="paper.png"></button>
+                <button type="submit" class="buttons" id="SCISSORS"><img id="SCISSORS" class='choices' src="scissors.png"></button>
+            </div>
+            <div id="score-text">Make a decision...</div>
+        </div>
+        <div id="button">
+            <button id="reset" class="reset" type="button">Another Interview?</button>
+        </div>
+    </div>
+    <footer>Created by Zilharr</footer>
 </body>
 </html>

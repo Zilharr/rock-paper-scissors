@@ -1,0 +1,119 @@
+* {
+    font-family: 'Megrim', cursive, 'Roboto', sans-serif;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    max-width: 875px;
+    font-weight: 800;
+    height: 175px;
+}
+
+h1 {
+    word-wrap: normal;
+    font-weight: bold;
+    padding: 20px;
+}
+
+p, button {
+    font-weight: 800;
+    font-size: 20px;
+}
+
+#scoreboard {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 20px;
+}
+
+#score {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 10px;
+}
+
+#score-text {
+    font-size: 20px;
+    font-weight: 800;
+    padding: 20px;
+}
+
+.buttons {
+    border: none;
+    appearance: none;
+    background-color: inherit;
+}
+
+.choices:hover {
+    animation: rotate 2s infinite alternate;
+}
+
+@keyframes rotate {
+    0% {
+      transform: rotate(0);
+    }
+    50% {
+      transform: rotate(22deg);
+    }
+    100% {
+      transform: rotate(-22deg);
+    }
+}
+
+#choice {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+
+#container {
+    width: 400px;
+}
+
+#border {
+    padding: 0 50px;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+
+#options {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+
+img {
+    background-color: white;
+}
+
+#button {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+#reset {
+    transform: none;
+    visibility: hidden;
+}
+
+footer {
+    margin-top: auto;
+}
+
