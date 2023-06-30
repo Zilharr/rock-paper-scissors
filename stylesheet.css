@@ -15,10 +15,11 @@ body {
 }
 
 header {
-    display: flex;
     max-width: 875px;
     font-weight: 800;
     height: 175px;
+    margin: -30px;
+    padding-bottom: 60px;
 }
 
 h1 {
@@ -81,7 +82,7 @@ p, button {
 }
 
 #container {
-    width: 400px;
+    max-width: 400px;
 }
 
 #border {

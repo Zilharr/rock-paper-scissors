@@ -5,7 +5,7 @@ let player = 0;
 let computer = 0;
 i = 0;
 let speed = 50;
-let premise = 'THE AI IS THREATENING TO TAKE YOUR JOB UNLESS YOU CAN OUTSMART IT IN A GAME OF ROCK, PAPER, SCISSORS DO YOU HAVE WHAT IT TAKES?';
+let premise = 'THE AI IS THREATENING TO TAKE YOUR JOB UNLESS YOU CAN OUTSMART IT IN A GAME OF ROCK, PAPER, SCISSORS! DO YOU HAVE WHAT IT TAKES?';
 
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
